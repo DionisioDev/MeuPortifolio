@@ -1,21 +1,19 @@
 {
-    "daniel": {
-        "nome": "Daniel Melo",
-        "descricao": "Desenvolvedor Front-end",
-        "estado": "São Paulo",
-        "cidade": "Mauá",
-        "idade": "21",
-        "idiomas": {
-            "espanhol": "55",
-            "ingles": "80",
-            "portugues": "99"
-        },
-        "linguagens": {
-            "html": "95",
-            "css": "80",
-            "js": "50",
-            "php": "10",
-            "wordpress": "10"
-        }
+    "nome": "Daniel Melo",
+    "descricao": "Desenvolvedor Front-end",
+    "estado": "São Paulo",
+    "cidade": "Mauá",
+    "idade": "21",
+    "idiomas": {
+        "espanhol": "55",
+        "ingles": "80",
+        "portugues": "99"
+    },
+    "linguagens": {
+        "html": "95",
+        "css": "80",
+        "js": "50",
+        "php": "10",
+        "wordpress": "10"
     }
 }
