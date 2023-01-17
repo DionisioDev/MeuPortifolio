@@ -50,8 +50,6 @@ export class MenuLateralComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.buscaDados();
-
-		this.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
 	}
 
 	buscaDados() {
@@ -79,14 +77,4 @@ export class MenuLateralComponent implements OnInit {
 		});
 		console.log(tipo);
 	}
-
-	// googleTranslateElementInit(tipo:string){
-	// 	if(tipo === 'en'){
-	// 		new google.translate.translateElement({pageLanguage: 'en'}, 'google_translate_element_en');
-	// 	}
-	// }
-
-	// window.gtranslateSettings = {"default_language":"pt","languages":["pt","es","en"]}</script>
-    // <script src="https://cdn.gtranslate.net/widgets/v1.0.0/float.js" defer></script>
-
 }

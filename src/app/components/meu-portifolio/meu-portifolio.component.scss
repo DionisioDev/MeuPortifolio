@@ -6,8 +6,23 @@
         padding: 0 15px;
         border-radius: 10px;
         position: relative;
+
+        .icone_banner{
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            background-image: url("/assets/img/icone_banner.svg");
+            background-repeat: no-repeat;
+            font-size: 50px;
+            height: 200px;
+            width: 200px;
+        }
         
         .banner{
+            background-image: url("/assets/img/banner.svg");
+            background-size: cover;
+			background-repeat: no-repeat;
+            height: 400px;
             width: 100%;
             border-radius: 10px;
             box-shadow: 5px 5px 0px 2px var(--color_primary)
@@ -113,6 +128,14 @@
 @media (max-width: 749px) {
     .grid-container{
         .img{
+
+            .banner{
+                background-image: url("/assets/img/banner_responsive.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 200px;
+            }
+
             .primeiro{
                 top: 20px; 
                 right: 80px;
