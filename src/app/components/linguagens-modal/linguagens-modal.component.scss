@@ -1,0 +1,39 @@
+.bx-modal-linguagens{
+    color: #ebf0f1;
+    border-radius: 10px;
+    font-family: var(--font_primary), "Helvetica Neue";
+
+    .linguagem{
+
+        .titulo{
+            display: flex;
+            justify-content: center;
+
+            h3{
+                color: #662dc1;
+            }
+    
+            .logo{
+                height: 80px;
+                margin-bottom: 30px;
+            }
+        }
+     
+
+        p{
+            font-size: 14px;
+            text-align: justify;
+            margin: 0;
+        }
+    }
+
+    .close{
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+    }
+}
+
+::ng-deep .mat-dialog-container{
+    background: #1E2227;
+}

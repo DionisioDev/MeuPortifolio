@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <div class="img">
+        <p class="primeiro">BEM VINDOS AO MEU <br> PORTIFÓLIO</p>
+        <p class="segundo">&lt;div&gt; DEV EM CONSTRUÇÃO &lt;/div&gt;</p>
+        <img class="banner" src="assets/img/imagem_fundo.jpg">
+    </div>
+    <mat-grid-list cols="3" rowHeight="400px" gutterSize="10px">
+        <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+            <mat-card class="dashboard-card">
+                <mat-card-header>
+                    <mat-card-title class="dashboard-title">
+                        {{card.title}}
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="dashboard-card-content">
+                    <div>{{card.descrition}}</div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

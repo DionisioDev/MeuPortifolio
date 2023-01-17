@@ -1,0 +1,135 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <div class="perfil">
+            <img class="foto-perfil" src="assets/img/foto_perfil.jpg">
+            <h3>{{dados.nome}}</h3>
+            <p>{{dados.descricao}}</p>
+        </div>
+        <div class="informacoes">
+            <P>
+                Estado:<br>
+                Cidade:<br>
+                Idade:<br>
+            </P>
+            <P>
+                {{dados.estado}}<br>
+                {{dados.cidade}}<br>
+                {{dados.idade}}<br>
+            </P>
+        </div>
+        <hr>
+        <div class="bx-idiomas">
+            <div class="graficos">
+            <mat-progress-spinner class="portugues" 
+                [color]="color" 
+                [mode]="modo" 
+                [value]="portugues"
+                [diameter]="55">
+            </mat-progress-spinner>
+            
+            <mat-progress-spinner class="ingles" 
+                [color]="color" 
+                [mode]="modo" 
+                [value]="ingles"
+                [diameter]="55">
+            </mat-progress-spinner>
+            
+            <mat-progress-spinner class="espanhol" 
+                [color]="color" 
+                [mode]="modo" 
+                [value]="espanhol"
+                [diameter]="55">
+            </mat-progress-spinner>
+            </div>
+            <div class="legendas">
+                <p>
+                    {{portugues}}%<br>
+                    Português
+                </p>
+                <p>
+                    {{ingles}}%<br>
+                    Ingles
+                </p>
+                <p>
+                    <a href="#" class="es"></a>
+                    {{espanhol}}%<br>
+                    Espanhol
+                </p>
+            </div>
+           
+        </div>
+        <hr>
+        <div class="bx-linguagens">
+            <div class="html" (click)="abrirModalLinguagens('html')">
+                <div class="titulo-linguagens">
+                    <p>HTML</p>
+                    <p>{{html}}%</p>
+                </div>
+                <mat-progress-bar
+                    [color]="color"
+                    [mode]="modo"
+                    [value]="html"
+                    [bufferValue]="bufferValue">
+                </mat-progress-bar>
+            </div>
+            <div class="css" (click)="abrirModalLinguagens('css')">
+                <div class="titulo-linguagens">
+                    <p>CSS</p>
+                    <p>{{css}}%</p>
+                </div>
+                <mat-progress-bar
+                    [color]="color"
+                    [mode]="modo"
+                    [value]="css"
+                    [bufferValue]="bufferValue">
+                </mat-progress-bar>
+            </div>
+            <div class="js" (click)="abrirModalLinguagens('js')">
+                <div class="titulo-linguagens">
+                    <p>JS</p>
+                    <p>{{js}}%</p>
+                </div>
+                <mat-progress-bar
+                    [color]="color"
+                    [mode]="modo"
+                    [value]="js"
+                    [bufferValue]="bufferValue">
+                </mat-progress-bar>
+            </div>
+            <div class="php" (click)="abrirModalLinguagens('php')">
+                <div class="titulo-linguagens">
+                    <p>PHP</p>
+                    <p>{{php}}%</p>
+                </div>
+                <mat-progress-bar class="barra-php"
+                    [color]="color"
+                    [mode]="modo"
+                    [value]="php"
+                    [bufferValue]="bufferValue">
+                </mat-progress-bar>
+            </div>
+            <div class="wordPress" (click)="abrirModalLinguagens('wordpress')">
+                <div class="titulo-linguagens">
+                    <p>WordPress</p>
+                    <p>{{wordPress}}%</p>
+                </div>
+                <mat-progress-bar class="barra-wordPress"
+                    [color]="color"
+                    [mode]="modo"
+                    [value]="wordPress"
+                    [bufferValue]="bufferValue">
+                </mat-progress-bar>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+                *ngIf="isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <ng-content #name></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>
