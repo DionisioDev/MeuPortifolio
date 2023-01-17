@@ -24,15 +24,15 @@ export class MenuLateralComponent implements OnInit {
 	bufferValue: number = 100;
 	velocidade: number = 80;
 
-  	portugues: number;
-	ingles: number;
-	espanhol: number;
+  	portugues: number = 0;
+	ingles: number = 0;
+	espanhol: number = 0;
 
-	html: number;
-	css: number;
-	js: number;
-	php: number;
-	wordPress: number;
+	html: number = 0;
+	css: number = 0;
+	js: number = 0;
+	php: number = 0;
+	wordPress: number = 0;
 
 	src: string
 	
