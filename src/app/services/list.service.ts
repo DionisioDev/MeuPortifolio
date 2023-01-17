@@ -8,14 +8,14 @@ import { DadosModel } from '../core/models/dados.model';
 })
 export class ListService {
 
-    private apiUrl = 'http://localhost:3000/daniel';
+    private apiUrl = 'assets/db/';
 
     constructor(
         private http: HttpClient
     ) { }
 
     getDados(): Observable<DadosModel> {
-        return this.http.get<DadosModel>(this.apiUrl);
+        return this.http.get<DadosModel>(`${this.apiUrl}db.json`);
     }
 
 }
