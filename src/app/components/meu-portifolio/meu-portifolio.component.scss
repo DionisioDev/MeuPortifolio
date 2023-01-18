@@ -7,28 +7,29 @@
         border-radius: 10px;
         position: relative;
 
-        .icone_banner{
+        .icone_banner {
             position: absolute;
-            top: 100px;
-            left: 200px;
+            top: 30px;
+            left: 270px;
             background-image: url("/assets/img/icone_banner.svg");
             background-repeat: no-repeat;
             font-size: 50px;
-            height: 200px;
-            width: 200px;
+            height: 350px;
+            width: 350px;
         }
-        
-        .banner{
+
+        .banner {
             background-image: url("/assets/img/banner.svg");
             background-size: cover;
-			background-repeat: no-repeat;
+            background-repeat: no-repeat;
             height: 400px;
             width: 100%;
             border-radius: 10px;
-            box-shadow: 5px 5px 0px 2px var(--color_primary)
+            box-shadow: 5px 5px 0px 2px var(--color_primary);
+            margin-bottom: 25px;
         }
 
-        .primeiro{
+        .primeiro {
             position: absolute;
             text-align: end;
             top: 50px;
@@ -39,7 +40,7 @@
             margin: 0 0 20px;
         }
 
-        .segundo{
+        .segundo {
             position: absolute;
             text-align: center;
             top: 200px;
@@ -48,6 +49,9 @@
             font-size: 30px;
             font-family: var(--font_secundary), "Helvetica Neue";
             margin-bottom: 10px;
+            border: solid 5px var(--color_primary);
+            border-radius: 20px;
+            background-color: var(--color_primary);
         }
     }
 
@@ -61,8 +65,10 @@
         color: var(--color_text);
         text-align: center;
 
-        .dashboard-title{
+        .dashboard-title {
+            
             font-family: var(--font_secundary), "Helvetica Neue";
+            margin: 15px 0 0;
         }
 
         .dashboard-card-content {
@@ -77,102 +83,171 @@
 }
 
 @media (max-width: 1650px) {
-    .grid-container{
-        .img{
-            .primeiro{
+    .grid-container {
+        .img {
+            .primeiro {
                 font-size: 45px;
             }
-    
-            .segundo{
+
+            .segundo {
                 font-size: 25px;
+                top: 150px;
             }
         }
-    }    
+    }
 }
 
 @media (max-width: 1470px) {
-    .grid-container{
-        .img{
-            .primeiro{
-                font-size: 35px;
+    .grid-container {
+        .img {
+
+            .icone_banner {
+                left: 150px;
+            }
+
+            .primeiro {
+                font-size: 45px;
                 right: 140px;
             }
-    
-            .segundo{
+
+            .segundo {
                 top: 150px;
-                font-size: 15px;
+                font-size: 25px;
                 right: 140px;
             }
         }
-    }    
+    }
+}
+
+@media (max-width: 1246px) {
+    .grid-container {
+        .img {
+
+            .icone_banner {
+                left: 30px;
+            }
+
+            .primeiro {
+                right: 80px;
+            }
+
+            .segundo {
+                font-size: 25px;
+                right: 80px;
+            }
+        }
+    }
 }
 
 @media (max-width: 979px) {
-    .grid-container{
-        .img{
-            .primeiro{
-                top: 15px;
-                right: 80px;
+    .grid-container {
+        .img {
+            .icone_banner {
+                background-image: url("/assets/img/icone_banner_responsive.svg");
+                top: 80px;
+                left: 100px;
+            }
+
+            .primeiro {
+                top: 80px;
+                right: 50px;
+                font-size: 45px;
+            }
+
+            .segundo {
+                top: 170px;
+                right: 50px;
                 font-size: 25px;
             }
-    
-            .segundo{
-                top: 90px;
-                right: 80px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .grid-container {
+        .img {
+            .icone_banner {
+                background-image: url("/assets/img/icone_banner_responsive.svg");
+                top: 170px;
+                left: 50px;
+            }
+
+            .primeiro {
+                top: 60px;
+                right: 50px;
+                font-size: 35px;
+            }
+
+            .segundo {
+                top: 150px;
+                right: 50px;
                 font-size: 15px;
             }
         }
-    }    
+    }
 }
 
 @media (max-width: 749px) {
-    .grid-container{
-        .img{
+    .grid-container {
+        .img {
 
-            .banner{
+            .icone_banner {
+                background-image: url("/assets/img/icone_banner_responsive.svg");
+                top: 70px;
+                left: 30px;
+            }
+
+            .banner {
                 background-image: url("/assets/img/banner_responsive.svg");
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 200px;
+                height: 300px;
             }
 
-            .primeiro{
-                top: 20px; 
-                right: 80px;
+            .primeiro {
+                top: 70px;
+                right: 50px;
+                font-size: 25px;
+            }
+
+            .segundo {
+                top: 140px;
+                right: 50px;
                 font-size: 15px;
             }
-    
-            .segundo{
-                top: 70px;
-                right: 80px;
-                font-size: 8px;
-            }
         }
-    }    
+    }
 }
 
-@media (max-width: 425px) {
-    .grid-container{
-        .img{
-            .primeiro{
-                top: 20px; 
-                right: 60px;
-                font-size: 10px;
+@media (max-width: 480px) {
+    .grid-container {
+        .img {
+
+            .icone_banner {
+                background-image: url("/assets/img/icone_banner_responsive2.svg");
+                top: 140px;
+                left: 30px;
             }
-    
-            .segundo{
-                top: 50px;
-                right: 60px;
-                font-size: 5px;
+
+            .primeiro {
+                top: 40px;
+                right: 40px;
+                font-size: 25px;
+            }
+
+            .segundo {
+                top: 90px;
+                right: 40px;
+                font-size: 13px;
             }
         }
-    }    
+    }
 }
 
-::ng-deep .mat-toolbar.mat-primary{
+::ng-deep .mat-toolbar.mat-primary {
     background: var(--color_primary);
 }
 
-::ng-deep .mat-card:not([class*=mat-elevation-z]){
+::ng-deep .mat-card:not([class*=mat-elevation-z]) {
     box-shadow: 5px 5px 0px 2px var(--color_primary);
 }

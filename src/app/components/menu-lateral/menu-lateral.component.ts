@@ -8,6 +8,7 @@ import { MatProgressSpinnerModule, ProgressSpinnerMode } from '@angular/material
 import { ThemePalette } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LinguagensModalComponent } from '../linguagens-modal/linguagens-modal.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'app-menu-lateral',
@@ -18,21 +19,22 @@ export class MenuLateralComponent implements OnInit {
 
 	dados: DadosModel | any;
 	linguagem: string;
+	idiomas: string;
 
 	color : ThemePalette = 'primary';
   	modo: ProgressSpinnerMode = 'determinate';
 	bufferValue: number = 100;
 	velocidade: number = 80;
 
-  	portugues: number = 0;
-	ingles: number = 0;
-	espanhol: number = 0;
+  	portugues: number;
+	ingles: number;
+	espanhol: number;
 
-	html: number = 0;
-	css: number = 0;
-	js: number = 0;
-	php: number = 0;
-	wordPress: number = 0;
+	html: number;
+	css: number;
+	js: number;
+	php: number;
+	wordPress: number;
 
 	src: string
 	
@@ -50,11 +52,16 @@ export class MenuLateralComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.buscaDados();
+
+		document.body.classList.add(environment.whitelabel);
+
 	}
 
 	buscaDados() {
 		this.dados = this.listService.getDados().subscribe((res) => {
 			this.dados = res;
+			this.linguagem = this.dados.linguagens;
+
 			this.espanhol = this.dados.idiomas.espanhol;
 			this.ingles = this.dados.idiomas.ingles;
 			this.portugues = this.dados.idiomas.portugues;
@@ -77,4 +84,5 @@ export class MenuLateralComponent implements OnInit {
 		});
 		console.log(tipo);
 	}
+
 }

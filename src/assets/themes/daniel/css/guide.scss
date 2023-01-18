@@ -1,11 +1,42 @@
-:root{
+:root .daniel{
 
     --color_primary: #662dc1;
     --color_text: #ebf0f1;
     --color_backgound: #1E2227;
     --color_backgound_sec: #323940;
 
-    /* Foto perfil */
+    /* images */
 
     --foto_perfilurl: url("/assets/themes/daniel/images/foto_perfil.jpg");
+
+    --foto_perfil: url("/assets/themes/daniel/images/foto_perfil.jpg");
+    --foto_banner: url("/assets/img/imagem_fundo.jpg")
+    --foto_banner_responsive: url("/assets/img/imagem_fundo_responsive.jpg")
+
+    /* tipografia */
+
+    --font_primary: "Nunito";
+    --font_secundary: "bebas neue";
+    --font_title: "passion one";
+}
+
+:root .whitelabel {
+
+    --color_primary: #03880a;
+    --color_text: #ebf0f1;
+    --color_backgound: #000000;
+    --color_backgound_sec: #43484d;
+
+    /* images */
+
+    --foto_perfil: url("/assets/themes/daniel/images/foto_perfil.jpg");
+    --foto_banner: url("/assets/img/imagem_fundo.jpg")
+    --foto_banner_responsive: url("/assets/img/imagem_fundo_responsive.jpg")
+
+    /* tipografia */
+
+    --font_primary: "Nunito";
+    --font_secundary: "bebas neue";
+    --font_title: "passion one";
+
 }

@@ -42,7 +42,7 @@ import { LinguagensModalComponent } from './components/linguagens-modal/linguage
     HttpClientModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
